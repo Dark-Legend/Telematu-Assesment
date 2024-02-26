@@ -45,7 +45,9 @@ export const Table = () => {
           {rowData?.map((val, index) => (
             <tr
               key={index}
-              className="border w-full border-solid border-b-slate-300 border-r-0 border-l-0 border-t-0"
+              className={`border w- ${
+                index === rowData?.length - 1 && "border-none"
+              } border-solid border-b-slate-300 border-r-0 border-l-0 border-t-0`}
             >
               <td className="p-2 overflow-y-auto">
                 <div className="flex items-center gap-2">
